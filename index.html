@@ -1,9 +1,12 @@
+<!DOCTYPE html>
+<html>
 <style>
   :root {
     --penguin-size: 300px;
     --penguin-skin: black;
     --penguin-belly: white;
     --penguin-beak: orange;
+    --penguin-size2: 600px;
   }
 
   @media (max-width: 350px) {
@@ -14,12 +17,24 @@
 
     }
   }
-
-  .penguin {
+  .penguin_all {
     position: relative;
     margin: auto;
+    width: var(--penguin-size2, 600px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .penguin {
+    position: absolute;
     display: block;
-    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .penguin2 {
+    position: absolute;
+    margin-left: 300px;
+    display: block;
     width: var(--penguin-size, 300px);
     height: var(--penguin-size, 300px);
   }
@@ -222,8 +237,24 @@
 
   .penguin * {
     position: absolute;
+  } 
+
+  .penguin2 * {
+    position: absolute;
+  } 
+
+
+  .ncov_vis{
+    position: relative;
+    margin: auto;
+  }
+  .spatial_ds{
+    position: relative;
+    margin: auto;
+    <!-- margin-left: 600px; -->
   }
 </style>
+<div class="penguin_all">
 <div class="penguin">
   <div class="penguin-bottom">
     <div class="right-hand_wave"></div>
@@ -247,7 +278,7 @@
     <div class="beak-bottom"></div>
   </div>
 </div>
-<div class="penguin">
+<div class="penguin2">
   <div class="penguin-bottom">
     <div class="right-hand"></div>
     <div class="left-hand"></div>
@@ -270,13 +301,27 @@
     <div class="beak-bottom"></div>
   </div>
 </div>
-<div>
+</div>
+
+<head>
+  <title>Li Shen's Personal Site</title>
+</head>
+
+<body>
+
+<div class="ncov_vis">
 <h1>
   <a href="ncov_vis.html">New Coronavirus 2019 Outside of China Visualization</a>
 </h1>
 </div>
-<div>
+
+<div class="spatial_ds">
 <h1>
-  <a href=https://storymaps.arcgis.com/stories/9fdccffa039947c9b1e3a60781f3fd6c>A practising project of spatial data science</a>
+  <a href=https://storymaps.arcgis.com/stories/9fdccffa039947c9b1e3a60781f3fd6c><img src="images/world-map-678x322.png" alt="Esri Data Science Practising Project">
+    <p>A Practising Project of Spatial Data Science</p></a>
 </h1>
 </div>
+
+</body>
+
+</html>
