@@ -168,7 +168,69 @@ section .content .highlight {
   width: 100%;
   margin-bottom: 15px;
 }
-
+#research_projects .content {
+  max-width: 900px;
+}
+#research_projects .content a.project {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+}
+#research_projects .content a.project::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: background 0.3s linear;
+          transition: background 0.3s linear;
+}
+#research_projects .content a.project .img-container {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#research_projects .content a.project .img-container.contain {
+  background-size: contain;
+}
+#research_projects .content a.project .description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background: #ECF0F1;
+  color: #34495e;
+  -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear;
+}
+#research_projects .content a.project .description .name {
+  margin: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+#research_projects .content a.project:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+#research_projects .content a.project:hover .description {
+  background: #555;
+  color: white;
+}
+#research_projects .content .modal-body {
+  text-align: left;
+}
+#research_projects .content .modal-body img {
+  width: 100%;
+  margin-bottom: 15px;
+}
 #pub .content {
   max-width: 750px;
 }
